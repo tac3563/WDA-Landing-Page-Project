@@ -1,0 +1,265 @@
+/* Custom Properties */
+
+:root {
+    --primary-text: #f9faf8;
+    --secondary-text: #e5e7eb;
+    --background-color: #1f2937;
+    --CTA-color: #3883f6;
+}
+
+/* Universal Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Nav Section */
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+    padding-top: 0.5em;
+    margin-bottom: 7em;
+}
+
+.nav-right,
+.nav-left {
+    display: flex;
+}
+
+.nav-right {
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-text);
+}
+
+ul {
+    list-style-type: none;
+    color: var(--secondary-text);
+    font-size: 1.125rem;
+}
+
+li {
+    padding: 0 0.5em;
+}
+
+li:nth-child(3) {
+    padding-right: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    opacity: 75%;
+}
+
+a:hover {
+    color: var(--primary-text);
+    opacity: 100%;
+}
+
+/* Header Section */
+
+.container {
+    background: #1f2937;
+    margin-bottom: 2em;
+}
+
+.header-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 70%;
+    margin: 0 auto;
+    flex: 1 0;
+    padding-bottom: 7em;
+    gap: 0.625rem;
+}
+
+.header-title {
+    font-size: 3rem;
+    margin-bottom: 0.25em;
+    color: var(--primary-text);
+}
+
+.header-text {
+    color: var(--secondary-text);
+    opacity: 75%;
+    font-size: 1.125rem;
+    margin-bottom: 3em;
+}
+
+.header-CTA {
+    padding: 0.5em 1.5em;
+    background: var(--CTA-color);
+    color: var(--primary-text);
+    border-radius: 0.25em;
+    border: none;
+    font-size: 1.125rem;
+}
+
+.header-CTA:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.header-CTA:active {
+    opacity: 50%;
+}
+
+.header-img {
+    width: 40%;
+    max-width: 100%;
+}
+
+/* Main Section */
+
+.main-section {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5em;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--background-color);
+    margin-bottom: 1.5em;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.sml-img {
+    width: 10em;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.image {
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+/* Testimonial Section */
+
+.testimonial-section {
+    background: var(--secondary-text);
+    color: var(--background-color);
+    font-size: 2.25rem;
+    padding: 5em;
+    font-weight: 300;
+}
+
+.quote {
+    font-style: italic;
+}
+
+.quote-caption {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* CTA Section */
+
+.CTA-section {
+    padding: 5em;
+    color: var(--primary-text);
+}
+
+.CTA-container {
+    width: 80%;
+    margin: 0 auto;
+    background: var(--CTA-color);
+    padding: 2em 4em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+}
+
+.CTA-btn {
+    background: var(--CTA-color);
+    color: var(--primary-text);
+    border: var(--primary-text) solid 1px;
+    border-radius: 0.25em;
+    padding: 0.25em 1.25em;
+    font-size: 1.25rem;
+}
+
+.CTA-btn:hover {
+    opacity: 75%;
+    cursor: pointer;
+}
+
+.CTA-btn:active {
+    opacity: 50%;
+}
+
+/* Footer Section */
+
+.footer-section {
+    background: var(--background-color);
+    color: var(--secondary-text);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries */
+
+@media (min-width: 1400px) {
+    .nav-bar,
+    .main-section,
+    .header-container,
+    .CTA-container {
+        max-width: 50%;
+    }
+
+    .testimonial-container {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .left-header {
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+    }
+
+    .header-CTA {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-bar {
+        width: 100%;
+        padding: 1em 2em;
+    }
+}
